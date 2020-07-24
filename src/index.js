@@ -1,5 +1,7 @@
+import { helloWorld } from './helloWorld';
+
 function main() {
-  console.log('Hello World!');
+  helloWorld();
 }
 
-module.exports = main();
+main();

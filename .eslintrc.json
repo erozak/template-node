@@ -1,32 +1,63 @@
 {
-  "env": {
-    "node": true,
-    "es6": true,
-    "es2020": true
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "modules": true
-    },
-    "ecmaVersion": 2020,
-    "sourceType": "module"
-  },
-  "plugins": [
-    "import"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js"
-        ]
+  "$schema": "http://json.schemastore.org/eslintrc",
+  "overrides": [
+    {
+      "files": [
+        "*.[t|j]s"
+      ],
+      "parser": "babel-eslint",
+      "env": {
+        "es2020": true,
+        "node": true
+      },
+      "plugins": [
+        "prettier"
+      ],
+      "extends": [
+        "standard",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:prettier/recommended",
+        "prettier/standard"
+      ],
+      "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+      },
+      "rules": {
+        "no-console": 1
       }
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ]
+    },
+    {
+      "files": [
+        "*.test.[jt]s"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "env": {
+        "jest/globals": true
+      }
+    },
+    {
+      "files": [
+        "*.md"
+      ],
+      "plugins": [
+        "markdown"
+      ]
     }
-  },
-  "rules": {}
+  ]
 }

@@ -3,35 +3,40 @@
 {
   "name": "Node.js 12",
   "dockerFile": "Dockerfile",
-
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
     "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[json]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[markdown]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
     "editor.codeActionsOnSave": {
       "source.fixAll": true
-    }
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
   },
-
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-    "formulahendry.terminal",
+    "christian-kohler.npm-intellisense",
     "dbaeumer.vscode-eslint",
-    "editorconfig.editorconfig",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "formulahendry.terminal",
+    "orta.vscode-jest",
+    "yzhang.markdown-all-in-one"
   ]
-
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
-
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "yarn install",
-
   // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
   // "remoteUser": "node"
 }

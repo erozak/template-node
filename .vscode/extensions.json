@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "christian-kohler.npm-intellisense",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.terminal",
+    "orta.vscode-jest",
+    "yzhang.markdown-all-in-one"
+  ]
+}
