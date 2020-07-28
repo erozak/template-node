@@ -1,9 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/eslintrc",
+  "root": true,
   "overrides": [
     {
       "files": [
-        "*.[t|j]s"
+        "src/**/*.[t|j]s"
       ],
       "parser": "babel-eslint",
       "env": {
@@ -30,7 +31,7 @@
     },
     {
       "files": [
-        "*.ts"
+        "src/**/*.ts"
       ],
       "parser": "@typescript-eslint/parser",
       "plugins": [
@@ -42,7 +43,7 @@
     },
     {
       "files": [
-        "*.test.[jt]s"
+        "src/**/*.test.[jt]s"
       ],
       "plugins": [
         "jest"
